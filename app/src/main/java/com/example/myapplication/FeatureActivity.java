@@ -45,8 +45,10 @@ public class FeatureActivity {
         git merge -m will merge the two branches and autocommit.
         so what happened is that the -m option requires a message : git merge -m <msg>
         and the --edit option was taken as the <msg>.
-        The correct form should be : git merge -m <msg> --edit new_feature master
-        I tried the new solution commiting the current conclusion in a new branch called
+        THE SOLUTION
+        1 - checkout master branch
+        2 - run command : git merge -m 'message' --edit second_feature
+        I tried the new solution by commiting the current conclusion in a new branch called
         second_feature and then merging the two version (master and second_feature together).
         */
     }
