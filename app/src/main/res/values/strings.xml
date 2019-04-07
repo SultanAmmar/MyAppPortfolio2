@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <!-- Main Activity strings -->
+    <string name="main_activity_btn1_txt" translatable="true">Button 1</string>
+    <string name="main_activity_btn2_txt" translatable="true">Button 2</string>
+</resources>
