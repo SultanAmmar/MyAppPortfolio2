@@ -13,8 +13,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private String s;
     private final String TAG = this.getClass().getSimpleName();
 
+    /*
+    هذه الأزرار تم إلغاؤها مؤقتا
     Button btn1;
-    Button btn2;
+    Button btn2; */
+
+    private Button addbtn;
+    private Button lstbtn;
+    private Button aboutbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +31,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
         j = j;
         s = s;
 
+        /*
+        هذا المقطع ته إلغاؤه مؤقتا
         //initializing btns
         btn1 = (Button)findViewById(R.id.activity_main_btn1);
         btn2 = (Button)findViewById(R.id.activity_main_btn2);
 
         btn1.setOnClickListener(this);
-        btn2.setOnClickListener(this);
+        btn2.setOnClickListener(this);*/
+
+        //تهيئة الأزرار
+        addbtn = (Button)findViewById(R.id.activity_main_addbtn);
+        lstbtn = (Button)findViewById(R.id.activity_main_lstbtn);
+        aboutbtn = (Button)findViewById(R.id.activity_main_aboutbtn);
+
+        aboutbtn.setOnClickListener(this);
+        lstbtn.setOnClickListener(this);
+        aboutbtn.setOnClickListener(this);
     }
 
     @Override
@@ -106,7 +123,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-
+/*
+ هذا المقطع تم إلغاؤه مؤقتا
         switch (v.getId()){
             case R.id.activity_main_btn1:
                 Toast.makeText(getApplicationContext(),"Button 1 Clicked !",Toast.LENGTH_SHORT).show();
@@ -115,6 +133,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.activity_main_btn2:
                 Toast.makeText(getApplicationContext(),"Button 2 Clicked !", Toast.LENGTH_SHORT).show();
                 break;
+        }
+        */
+        switch (v.getId()){
+            case R.id.activity_main_addbtn:
+                Toast.makeText(getApplicationContext(),"@strings/main_activity_addbtn_toast_txt",Toast.LENGTH_SHORT).show();
         }
     }
 }
