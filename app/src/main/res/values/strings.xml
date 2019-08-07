@@ -4,4 +4,8 @@
     <!-- Main Activity strings -->
     <string name="main_activity_btn1_txt" translatable="true">Button 1</string>
     <string name="main_activity_btn2_txt" translatable="true">Button 2</string>
+    <string name="main_activity_addbtn_txt" translatable="true">إضافة</string>
+    <string name="main_activity_lstbtn_txt" translateble="true">لائحة</string>
+    <string name="main_activity_aboutbtn_txt" translatable="true">حول البرنامج</string>
+    <string name="main_activity_addbtn_toast_txt" translatable ="true">تم الضغط على زر الإضافة</string>
 </resources>

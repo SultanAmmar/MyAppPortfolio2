@@ -45,10 +45,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         lstbtn = (Button)findViewById(R.id.activity_main_lstbtn);
         aboutbtn = (Button)findViewById(R.id.activity_main_aboutbtn);
 
-        aboutbtn.setOnClickListener(this);
+        addbtn.setOnClickListener(this);
         lstbtn.setOnClickListener(this);
         aboutbtn.setOnClickListener(this);
     }
+
+
 
     @Override
     protected void onRestart() {
@@ -137,7 +139,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         */
         switch (v.getId()){
             case R.id.activity_main_addbtn:
-                Toast.makeText(getApplicationContext(),"@strings/main_activity_addbtn_toast_txt",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),R.string.main_activity_addbtn_toast_txt,Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.activity_main_lstbtn:
+                 Toast.makeText(getApplicationContext(), R.string.main_activity_lstbtn_txt,Toast.LENGTH_SHORT).show();
+                 break;
+                 case R.id.activity_main_aboutbtn:
+                     Toast.makeText(getApplicationContext(),R.string.main_activity_aboutbtn_txt,Toast.LENGTH_SHORT).show();
+
         }
     }
 }
