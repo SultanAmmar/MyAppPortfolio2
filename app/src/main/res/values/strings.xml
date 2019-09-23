@@ -8,4 +8,7 @@
     <string name="main_activity_lstbtn_txt" translateble="true">لائحة</string>
     <string name="main_activity_aboutbtn_txt" translatable="true">حول البرنامج</string>
     <string name="main_activity_addbtn_toast_txt" translatable ="true">تم الضغط على زر الإضافة</string>
+
+    <!--Add Screen strings-->
+    <string name="addscreen_pricelabel_txt" translatable="true">اسم البضاعة</string>
 </resources>

@@ -7,24 +7,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:weightSum="3">
         <!-- Add button -->
         <Button
             android:id="@+id/activity_main_addbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_weight="1"
             android:text="@string/main_activity_addbtn_txt"/>
 
         <Button
             android:id="@+id/activity_main_lstbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
             android:text="@string/main_activity_lstbtn_txt"/>
 
         <Button
             android:id="@+id/activity_main_aboutbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
             android:text="@string/main_activity_aboutbtn_txt"
              />
 
