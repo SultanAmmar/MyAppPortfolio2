@@ -7,8 +7,15 @@
     <string name="main_activity_addbtn_txt" translatable="true">إضافة</string>
     <string name="main_activity_lstbtn_txt" translateble="true">لائحة</string>
     <string name="main_activity_aboutbtn_txt" translatable="true">حول البرنامج</string>
-    <string name="main_activity_addbtn_toast_txt" translatable ="true">تم الضغط على زر الإضافة</string>
+    <string name="main_activity_addbtn_toast_txt" translatable="true">تم الضغط على زر الإضافة</string>
 
     <!--Add Screen strings-->
-    <string name="addscreen_pricelabel_txt" translatable="true">اسم البضاعة</string>
+    <string name="addscreen_productname_label_txt" translatable="true">اسم البضاعة</string>
+    <string name="addscreen_productname_edittext_autofillhint_txt" translatable="true">السمك</string>
+    <string name="addscreen_productprice_label_txt" translatable="true">ثمن البضاعة</string>
+    <string name="addscreen_productprice_edittext_autofillhint_txt" translatable="true">13 درهم</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

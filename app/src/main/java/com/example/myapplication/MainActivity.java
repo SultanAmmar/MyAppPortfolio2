@@ -2,12 +2,14 @@ package com.example.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends FragmentActivity implements View.OnClickListener {
     private int i;
     private float j;
     private String s;
@@ -21,6 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button addbtn;
     private Button lstbtn;
     private Button aboutbtn;
+    private FrameLayout mainframe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
         addbtn = (Button)findViewById(R.id.activity_main_addbtn);
         lstbtn = (Button)findViewById(R.id.activity_main_lstbtn);
         aboutbtn = (Button)findViewById(R.id.activity_main_aboutbtn);
+
+//        التحقق من أن activity تستخدم نسخة layout مطابقة لactivity_main_framelayout
+        if (findViewById(R.id.activity_main_framelayout) != null){
+//            علر كل حال إذا كنا قد تم إعادتنا من حالة سابقة state عندها نخرج من هذه المعقوفة return
+//              و إلا انتهى بنا الأمر إلى وجود fragment متراكمة فوق بعضها البعض
+            if (savedInstanceState != null){
+                return;
+            }
+//            إنشاء framgent جديد ليتم وضعه بالactivity layout
+            AddScreenFragment addScreenFragment = new AddScreenFragment();
+//            في حالة أن activity بدأت بتعليمات خاصة special instructions
+//            TODO :  أكمل النص من الرابط https://developer.android.com/training/basics/fragments/fragment-ui
+            addScreenFragment.setArguments(getIntent().getExtras());
+            getSupportFragmentManager().beginTransaction().
+                    add(R.id.activity_main_framelayout, addScreenFragment).commit();
+
+        }
 
         addbtn.setOnClickListener(this);
         lstbtn.setOnClickListener(this);
