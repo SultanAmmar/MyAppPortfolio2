@@ -50,7 +50,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
 //        التحقق من أن activity تستخدم نسخة layout مطابقة لactivity_main_framelayout
         if (findViewById(R.id.activity_main_framelayout) != null){
-//            علر كل حال إذا كنا قد تم إعادتنا من حالة سابقة state عندها نخرج من هذه المعقوفة return
+//            على كل حال إذا كنا قد تم إعادتنا من حالة سابقة state عندها نخرج من هذه المعقوفة return
 //              و إلا انتهى بنا الأمر إلى وجود fragment متراكمة فوق بعضها البعض
             if (savedInstanceState != null){
                 return;
