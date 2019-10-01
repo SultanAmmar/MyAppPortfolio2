@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private Button addbtn;
     private Button lstbtn;
     private Button aboutbtn;
+    private AddScreenFragment addScreenFragment;
+    private AboutAppFragment aboutAppFragment;
     private FrameLayout mainframe;
 
     @Override
@@ -56,7 +59,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 return;
             }
 //            إنشاء framgent جديد ليتم وضعه بالactivity layout
-            AddScreenFragment addScreenFragment = new AddScreenFragment();
+            addScreenFragment = new AddScreenFragment();
+            aboutAppFragment = new AboutAppFragment();
 //            في حالة أن activity بدأت بتعليمات خاصة special instructions
 //            TODO :  أكمل النص من الرابط https://developer.android.com/training/basics/fragments/fragment-ui
             addScreenFragment.setArguments(getIntent().getExtras());
@@ -159,13 +163,34 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         */
         switch (v.getId()){
             case R.id.activity_main_addbtn:
-                Toast.makeText(getApplicationContext(),R.string.main_activity_addbtn_toast_txt,Toast.LENGTH_SHORT).show();
+                Log.d(TAG,"Add button clicked");
+                addScreenFragment.setArguments(getIntent().getExtras());
+                if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                    Toast.makeText(getApplicationContext(),
+                            R.string.main_activity_addbtn_toast_txt,Toast.LENGTH_SHORT)
+                            .show();
+                    getSupportFragmentManager()
+                            .beginTransaction().
+                            add(R.id.activity_main_framelayout,
+                                    addScreenFragment).
+                                                                                        commit();
+                } else {
+                    Toast.
+                            makeText(getApplicationContext(), R.string.screen_already_active,
+                            Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.activity_main_lstbtn:
-                 Toast.makeText(getApplicationContext(), R.string.main_activity_lstbtn_txt,Toast.LENGTH_SHORT).show();
-                 break;
-                 case R.id.activity_main_aboutbtn:
-                     Toast.makeText(getApplicationContext(),R.string.main_activity_aboutbtn_txt,Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "List button clicked");
+                Toast.makeText(getApplicationContext(), R.string.main_activity_lstbtn_txt,Toast.LENGTH_SHORT).show();
+                break;
+                case R.id.activity_main_aboutbtn:
+                    Log.d(TAG, "About button clicked");
+                     Toast.makeText(getApplicationContext(),R.string.main_activity_aboutbtn_txt,
+                             Toast.LENGTH_SHORT).show();
+                     aboutAppFragment.setArguments(getIntent().getExtras());
+                     getSupportFragmentManager().beginTransaction().
+                             replace(R.id.activity_main_framelayout,aboutAppFragment).commit();
 
         }
     }
