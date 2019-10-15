@@ -18,6 +18,6 @@ public class AboutAppFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_addscreen, container, false);
+        return inflater.inflate(R.layout.fragment_aboutappscreen, container, false);
     }
 }

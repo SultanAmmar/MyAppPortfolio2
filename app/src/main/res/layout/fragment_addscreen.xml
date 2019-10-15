@@ -39,14 +39,14 @@
         <EditText
             android:id="@+id/addscreen_price_edittext"
             android:layout_width="0dp"
-            android:layout_height="25dp"
+            android:layout_height="45dp"
             android:layout_weight="1"
             android:inputType="number"
             android:hint="@string/addscreen_productprice_edittext_autofillhint_txt"/>
         <EditText
             android:id="@+id/addscreen_productname_edittext"
             android:layout_width="0dp"
-            android:layout_height="25dp"
+            android:layout_height="45dp"
             android:layout_weight="2"
             android:inputType="text"
             android:hint="@string/addscreen_productname_edittext_autofillhint_txt"/>

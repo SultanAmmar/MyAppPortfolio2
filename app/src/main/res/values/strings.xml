@@ -19,11 +19,24 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- About screen strings -->
     <string name="aboutappscreen_txt" translatable="true">حول التطبيق :
     بسم الله الرحمن الرحيم، الحمد لله و الصلاة و السلام على رسول الله و على آله.
-    هذا التطبيق يهدف إلى المساعدة لإذن الله تعالى على تسجيل المشتريات في وقت سريع .
+    هذا التطبيق يهدف إلى المساعدة بإذن الله تعالى على تسجيل المشتريات في وقت سريع .
     يضم التطبيق شاشة رئيسية تضم ثلاث أزرار، الأول يحتوي على شاشة الإضافة و هي الشاشة التي تعرض في الأول مسبقا و يمكن الرجوع إليها بالضغط على هذا الزر.
     - الزر الثاني لعرض لائحة المشتريات المسجلة من قبل حسب تاريخ تسجيلها.
      أما الثالث فهو للرجوع إلى هذه الشاشة للاطلاع على كيفية استخدام التطبيق.</string>
+
+    <!--List Screen Strings-->
+    <string-array name="listscreen_dates_exemple">
+        <item> 12/05/2019 15:30</item>
+        <item> 06/05/2019 08:10</item>
+        <item> 01/05/2019 12:15</item>
+    </string-array>
+    
+    <!-- List element details strings -->
+    <string name="details_productbuying_time_txt" translatable="true">وقت الاقتناء</string>
+    <string name="details_productprice_label_txt" translatable="true">ثمن البضاعة</string>
+    <string name="details_productname_label_txt" translatable="true">اسم البضاعة</string>
 
 </resources>
